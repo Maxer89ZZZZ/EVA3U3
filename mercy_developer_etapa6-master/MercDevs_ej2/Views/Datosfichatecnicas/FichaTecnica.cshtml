@@ -1,0 +1,176 @@
+﻿@model MercDevs_ej2.Models.Datosfichatecnica
+
+@{
+    ViewData["Title"] = "Ficha Técnica";
+}
+
+<h1 style="text-align:center">Datos Ficha Técnica</h1>
+
+@if (ViewData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        <p>@ViewData["ErrorMessage"]</p>
+    </div>
+}
+else
+{
+    <div class="text-end">
+        <p>ID (Identificador): @Model.IdDatosFichaTecnica</p>
+        <p>Fecha Inicio: @(Model.FechaInicio?.ToString("dd/MM/yyyy"))</p>
+        <p>Fecha Finalización: @(Model.FechaFinalizacion?.ToString("dd/MM/yyyy"))</p>
+    </div>
+}
+
+<table class="table table-dark table-striped border border-light-subtle border-3">
+    <thead style="text-align:center">
+        <tr>
+            <th colspan="3">Datos Revelantes del CLiente</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th class="border-end">Nombre: </th>
+            <th class="border-end">Apellido: </th>
+            <th class="border-end">Celular: </th>
+        </tr>
+        <tr>
+            <td colspan="2" class="border-end">Correo: </td>
+            <td class="border-end">Dirección: </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-dark table-striped border border-light-subtle border-3">
+    <thead style="text-align:center">
+        <tr>
+            <th colspan="4">Datos Recepcion de Equipos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th class="border-end">ID: </th>
+            <th class="border-end">IdCliente: </th>
+            <th class="border-end">IdServicio: </th>
+			<th class="border-end">Fecha: </th>
+
+        </tr>
+        <tr>
+            <th class="border-end">ModeloPc: </th>
+            <th class="border-end">Grafico: </th>
+            <th class="border-end">MarcaPc: </th>
+            <th class="border-end">Acciones: </th>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-dark table-striped border border-light-subtle border border-3">
+    <thead style="text-align:center">
+        <tr>
+            <th colspan="6">Datos Variables</th>
+        </tr>
+    </thead>
+    <tbody>
+		<tr>
+			<th class="border-end">TipoPc: </th>
+			<th class="border-end" colspan="2">Pc Torres: </th>
+			<th class="border-end" colspan="2">Notebbok: </th>
+			<th class="border-end"> All-In-ONE: </th>
+		</tr>
+        <tr>
+            <th class="border-end">CapacidadRAM:</th>
+            <th class="border-end">4 GB: </th>
+            <th class="border-end">6 GB: </th>
+            <th class="border-end">8 GB: </th>
+            <th class="border-end">12 GB: </th>
+            <th class="border-end">Otra: </th>
+
+        </tr>
+        <tr>
+            <th class="border-end">TipoAlmacenamiento: </th>
+            <th class="border-end">HDD: </th>
+            <th class="border-end">SSD Sata: </th>
+            <th class="border-end">SSD M.2: </th>
+            <th colspan="2" class="border-end">SSD MVN M.2: </th>
+        </tr>
+        <tr>
+            <th class="border-end">TipoGpu: </th>
+            <th class="border-end" colspan="3">Chip Integrado: </th>
+            <th class="border-end" colspan="3">Targeta: </th>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-dark table-striped border border-light-subtle border border-3">
+    <thead style="text-align:center">
+        <tr>
+            <th colspan="4">Diagnostico y Soluciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th class="border-end">N°</th>
+            <th class="border-end">Descripcion</th>
+            <th class="border-end">Tiempo</th>
+            <th class="border-end">Solucion</th>
+        </tr>
+        <tr>
+            <th class="border-end">1</th>
+            <th class="border-end"></th>
+            <th class="border-end"></th>
+            <th class="border-end"></th>
+        </tr>
+        <tr>
+            <th class="border-end">2</th>
+            <th class="border-end"></th>
+            <th class="border-end"></th>
+            <th class="border-end"></th>
+        </tr>
+        <tr>
+            <th class="border-end">3</th>
+            <th class="border-end"></th>
+            <th class="border-end"></th>
+            <th class="border-end"></th>
+        </tr>
+        <tr>
+            <th class="border-end">4</th>
+            <th class="border-end"></th>
+            <th class="border-end"></th>
+            <th class="border-end"></th>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-dark table-striped border border-light-subtle border border-3">
+    <thead style="text-align:center">
+        <tr>
+            <th colspan="3">Observacions y Recomendaciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th class="border-end">N° de Observaciones</th>
+            <th class="border-end">Descripcion</th>
+            <th class="border-end">Recomendacion</th>
+        </tr>
+        <tr>
+            <th class="border-end">1</th>
+            <th class="border-end"></th>
+            <th class="border-end"></th>
+        </tr>
+        <tr>
+            <th class="border-end">2</th>
+            <th class="border-end"></th>
+            <th class="border-end"></th>
+        </tr>
+        <tr>
+            <th class="border-end">3</th>
+            <th class="border-end"></th>
+            <th class="border-end"></th>
+        </tr>
+        <tr>
+            <th class="border-end">4</th>
+            <th class="border-end"></th>
+            <th class="border-end"></th>
+        </tr>
+    </tbody>
+</table>
